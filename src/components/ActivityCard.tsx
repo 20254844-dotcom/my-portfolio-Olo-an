@@ -14,24 +14,20 @@ const ActivityCard: React.FC<{ activity: Activity }> = ({ activity }) => {
   return (
     <div className="rounded-lg border border-zinc-800 bg-zinc-900 p-5 flex flex-col gap-3 hover:border-zinc-700 transition-colors">
 
-      {/* Header */}
       <div className="flex items-start justify-between gap-2">
         <span className={`text-[10px] font-medium uppercase tracking-widest px-2 py-0.5 rounded ${typeBadgeColor[activity.type]}`}>
           {activity.type}
         </span>
       </div>
 
-      {/* Title */}
       <h3 className="text-sm font-semibold text-zinc-100 leading-snug">
         {activity.title}
       </h3>
 
-      {/* Description */}
       <p className="text-xs text-zinc-400 leading-relaxed">
         {activity.description}
       </p>
 
-      {/* Reflection toggle */}
       <button
         onClick={() => setExpanded(!expanded)}
         className="text-[10px] uppercase tracking-widest text-zinc-600 hover:text-zinc-400 transition-colors text-left"
@@ -45,7 +41,6 @@ const ActivityCard: React.FC<{ activity: Activity }> = ({ activity }) => {
         </p>
       )}
 
-      {/* Footer */}
       <div className="mt-auto pt-2 border-t border-zinc-800">
         <a
           href={activity.repo}

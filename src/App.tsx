@@ -1,5 +1,5 @@
-import React from 'react';
 import { STUDENT, ACTIVITIES, EXPERIENCE, TRIBUTES } from './data/portfolioData';
+import profilePic from './assets/profile.jpg';
 import ActivityCard from './components/ActivityCard';
 import Experience from './components/Experience';
 import { SectionTitle, Divider } from './components/portfolioComponents';
@@ -60,7 +60,7 @@ export default function App() {
         <div className="shrink-0">
           <div className="w-52 h-52 rounded-full border border-zinc-700 overflow-hidden bg-zinc-900">
             <img
-              src="/src/assets/profile.jpg"
+              src={profilePic}
               alt="Profile"
               className="w-full h-full object-cover"
             />
